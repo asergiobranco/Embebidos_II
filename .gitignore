@@ -8,3 +8,5 @@
 *.zip
 *.aux
 *.lof
+*.xcode*
+*.bin
