@@ -1,3 +1,10 @@
 *.exe
-testing/*
+*.elf
+*/testing/*
 *.pdf
+*.gz
+*.out
+*.log
+*.zip
+*.aux
+*.lof

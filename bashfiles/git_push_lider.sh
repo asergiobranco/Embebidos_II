@@ -1,0 +1,4 @@
+PATH_TO_DIR=""
+MY_USERNAME=""
+LIDER=""
+git push origin $MY_USERNAME:$LIDER
