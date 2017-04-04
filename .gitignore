@@ -10,3 +10,7 @@
 *.lof
 *.xcode*
 *.bin
+*.ppt
+*.pptx
+*.doc
+*.docx
