@@ -1,0 +1,30 @@
+grammar org.xtext.example.tz.TZ with org.eclipse.xtext.common.Terminals
+
+generate tZ "http://www.xtext.org/example/tz/TZ"
+
+Model:
+	(module+=MODULE | constant+=CONSTANT)*
+	tzvisor+=TZVISOR+
+;
+	
+TZVISOR:
+	'TZVISOR' name=ID '{'
+		  (variables+=VARIABLES | constant+=CONSTANT | module+=MODULE)+
+	'}';
+
+MODULE:
+	('SBOOT' | 'IPC' | 'DFI' | 'CFI' | 'HM') name=ID '{'
+		(label+=LABEL* | superType=[LABEL]*)
+	'}';
+
+LABEL:
+	name=ID ':' (INT | superType=[CONSTANT]) ';'
+;
+
+CONSTANT:
+	'CONST' name=ID INT ';'
+;
+
+VARIABLES:
+	superType=[CONSTANT] | superType=[MODULE] ';'
+;
