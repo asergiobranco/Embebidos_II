@@ -102,46 +102,57 @@ state <= 0;
    end
 end
                                      
-
 endmodule
 
-module comparator_g(
-         input [2:0]in1,
-         input [2:0]in2,
-         output out
-         );        
-         assign out = (in1 == in2);      
- endmodule
- 
+////////////////////////////// Comparate Guest ntestado ///////////////////////////
+module guestcomp(
+         input [2:0]i_currentguest,
+         output o_out,
+         input i_reset
+         );
+         reg [2:0] guest;        
+         assign o_out = (i_currentguest == guest);
+         
+always @(i_currentguest) 
+begin
+if(i_reset) guest=0;
+else if(i_currentguest!=o_out) guest=i_currentguest;
+end
+endmodule
+
+//////////////////////////// calculate deadlines ntestado ////////////////////////// 
 module calculate(
         input i_guest_change,
-        input i_predict,
-        input [31:0] i_memory,
+        input i_clear_predict,
+        input [31:0] i_mem_deadline,
+        input [31:0] i_mem_ran_time,
         input [31:0] i_current_time,
+        input i_clock,
         input i_reset,
-        output reg o_predic,
+        input i_overflow,
         output reg [31:0] o_ran_time,
         output reg [2:0] o_tdi_error
         );
  reg [31:0] start_time;
  reg [31:0] stop_time;
- reg [31:0] run_time;
- wire aux;
- assign aux = signal_from_predict;
+ reg [31:0] calc_time;
+ assign o_predict = i_clear_predict? 0:1'bz;
  
- always @(i_guest_change)
+ always @(posedge i_clock)
  begin
-    start_time = stop_time;
-    stop_time = i_current_time;
-    run_time = stop_time - start_time;
-    
-    o_ran_time = run_time + o_ran_time;
-    if(i_memory > o_ran_time)
-        o_tdi_error <= 3'b001;
-    o_predic <= 1;
+    if(i_guest_change)
+    begin
+        start_time <= stop_time;
+        stop_time <= i_current_time;
+        calc_time <= stop_time - start_time;
+        if(i_overflow) calc_time=32'HFFFF_FFFF-calc_time;
+        if(i_mem_deadline > o_ran_time) o_tdi_error <= 3'b001;
+        o_ran_time = calc_time + o_ran_time;
+    end
  end
 endmodule
 
+///////////////////////////////////// refazer
 module predict(
         input signal_predict,
         input [31:0] from_memory_ran,
