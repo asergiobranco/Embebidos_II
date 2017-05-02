@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue May  2 10:10:01 2017
+# Process ID: 9346
+# Current directory: /home/rijo/Downloads/Timer/hHM/hHM.runs/impl_1
+# Command line: vivado -log timer32b.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source timer32b.tcl -notrace
+# Log file: /home/rijo/Downloads/Timer/hHM/hHM.runs/impl_1/timer32b.vdi
+# Journal file: /home/rijo/Downloads/Timer/hHM/hHM.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source timer32b.tcl -notrace
