@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Apr 29 15:46:53 2017
+# Process ID: 8904
+# Current directory: C:/Users/aleit/VivadoProj/GDT_v2/GDT_v2.runs/synth_1
+# Command line: vivado.exe -log GDT.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source GDT.tcl
+# Log file: C:/Users/aleit/VivadoProj/GDT_v2/GDT_v2.runs/synth_1/GDT.vds
+# Journal file: C:/Users/aleit/VivadoProj/GDT_v2/GDT_v2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source GDT.tcl -notrace
