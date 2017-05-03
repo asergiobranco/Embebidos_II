@@ -50,7 +50,7 @@ module Deadline_Unit(
     reg [31:0] guest_temporal [7:0];
     
     
-    GDT ram_memory(
+    blk_mem_gen_0 ram_memory(
            .clock(clk),
            .guest_line(current_guestr),
            .GDT_column(columm_auxx),
@@ -60,10 +60,10 @@ module Deadline_Unit(
            .o_data(o_data)
            );   
             
-    comparator_g guests (
-                  .in1(current_guestr),
-                  .in2(current_guest),
-                  .out(out_comparator)
+    guestcomp guests (
+                  .i_currentguest(current_guest),
+                  .o_out(out_comparator),
+                  .i_reset(reset)
      );
      
     
