@@ -35,13 +35,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="2"/>
-    <Option Name="WTModelSimExportSim" Val="2"/>
-    <Option Name="WTQuestaExportSim" Val="2"/>
-    <Option Name="WTIesExportSim" Val="2"/>
-    <Option Name="WTVcsExportSim" Val="2"/>
-    <Option Name="WTRivieraExportSim" Val="2"/>
-    <Option Name="WTActivehdlExportSim" Val="2"/>
+    <Option Name="WTXSimExportSim" Val="3"/>
+    <Option Name="WTModelSimExportSim" Val="3"/>
+    <Option Name="WTQuestaExportSim" Val="3"/>
+    <Option Name="WTIesExportSim" Val="3"/>
+    <Option Name="WTVcsExportSim" Val="3"/>
+    <Option Name="WTRivieraExportSim" Val="3"/>
+    <Option Name="WTActivehdlExportSim" Val="3"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -59,21 +59,18 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.veo"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.vho"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.xml"/>
         <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
         <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="synth/blk_mem_gen_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
         <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="sim/blk_mem_gen_0.v"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="synth/blk_mem_gen_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="summary.log"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.vho"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
         <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.xml"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="blk_mem_gen_0.veo"/>
+        <CompFileExtendedInfo CompFileName="blk_mem_gen_0.xci" FileRelPathName="gdt_values.coe"/>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Deadline_Unit.v">
         <FileInfo>
@@ -82,15 +79,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Desktop/DUnit/DUnit.srcs/sources_1/imports/new/GDT.v">
+      <File Path="$PSRCDIR/sources_1/imports/new/GDT.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../GDT/GDT_v2.srcs/sources_1/new/GDT.v"/>
+          <Attr Name="ImportTime" Val="1493729167"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../Desktop/DUnit/DUnit.srcs/sources_1/ip/blk_mem_gen_0/GDT_startup_values.coe">
+      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/gdt_values.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
